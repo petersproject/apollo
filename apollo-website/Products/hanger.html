@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="icon" href="../images/Logo (1).png">
+        <title>Toko Apollo | Produk Kami</title>
+    </head>
+    <div class="header">
+        <a href="../test.html">
+            <img src="../images/Logo (1).png" alt="logo_apollo" width="50px" height="50px" align="left" style="vertical-align:top;margin:-10px -10px">
+        </a>
+        <a href="../test.html" class="logo">Apollo Warehouse</a>
+        <div class="header-right">
+            <a href="../test.html">Home</a>
+            <a class="active" href="../about.html">Produk</a>
+            <a href="../contact.html">Hubungi</a>
+        </div>
+    </div>
+
+    <body>
+        <div class="slideshow-produk center">
+            <div class="mySlides fade">
+                <img src="../images/Edited (JPEG)/Folding Hanger/FH20_1.jpg" style="width:100%;height:100%;">
+                <div class="text1">Folding Hanger 20 Sticks</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="../images/Edited (JPEG)/Folding Hanger/FH24_1.jpg" style="width:100%;height:100%;">
+                <div class="text1">Folding Hanger 24 Sticks</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="../images/Edited (JPEG)/Folding Hanger/FH30_1.jpg" style="width:100%;height:100%;">
+                <div class="text1">Folding Hanger 30 Sticks</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </body>
+</html>

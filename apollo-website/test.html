@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/Logo (1).png">
+        <title>Toko Apollo | Home</title>
+    </head>
+    <div class="header">
+        <a href="test.html">
+            <img src="images/Logo (1).png" alt="logo_apollo" width="50px" height="50px" align="left" style="vertical-align:top;margin:-10px -10px">
+        </a>
+        <a href="test.html" class="logo">Apollo Warehouse</a>
+        <div class="header-right">
+            <a class="active" href="test.html">Home</a>
+            <a href="about.html">Produk</a>
+            <a href="contact.html">Hubungi</a>
+        </div>
+    </div>
+
+    <body>
+        <div class="slideshow-container center-slide">
+            <!--div class="fadeTop"></div-->
+            <div class="mySlides fade">
+                <img src="images/Edited (JPEG)/Folding Hanger/hanger_edit.png" style="width:100%;height:100%;">
+                <div class="text">Folding Hanger 24 Sticks</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/Edited (JPEG)/Pengki/pengki_edit.png" style="width:100%;height:100%;">
+                <div class="text">Pengki</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/Edited (JPEG)/Gayung/gayung_edit.png" style="width:100%;height:100%;">
+                <div class="text">Gayung</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <br>
+        <br>
+        <br>
+        <div class="produk-kami">
+            <a class="overlay" href="about.html">
+                <img src="images/centong_editwide.png" alt="centong_wide" style="border-radius: 25px;margin-left: 50px;">
+            </a>
+        </div>
+        <div class="belanja-disini">
+            <a class="overlay" href="https://shopee.co.id/shop/309976082/search">
+                <img src="images/mangkok.png" alt="centong_wide" style="border-radius: 25px;margin-right: 50px;">
+            </a>
+        </div>
+
+    </body>
+</html>
